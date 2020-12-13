@@ -1,4 +1,4 @@
-<img src ="https://t1.daumcdn.net/cfile/tistory/175466144CC11C2755.png" width="90%"></img>
+<img src = "https://t1.daumcdn.net/cfile/tistory/175466144CC11C2755" width = "50%"></img>
 
 * Map  
   + key와 value
