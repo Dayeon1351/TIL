@@ -24,4 +24,13 @@
     ```JAVA
         HashSet<Integer> hs = new HashSet<>();
         hs.add();
+    ```  
+  + Iterator
+    ```JAVA
+      HashSet<Integer> hs = new HashSet<>();
+      Iterator it = hs.iterator();
+        
+        while(it.hasNext()){
+            answer[index++] = (int)it.next();
+        }
     ```
