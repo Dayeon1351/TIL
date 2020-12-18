@@ -19,12 +19,19 @@
     ``` 
 - - -
 * Set  
-  + 데이터의 중복을 인정하지 않는다.
-    - HashSet
+  + 데이터의 중복을 인정하지 않는다. 자동 제거해준다.
+    - HashSet  
+    > 값들을 자동정렬 해주지 않는다.
     ```JAVA
         HashSet<Integer> hs = new HashSet<>();
         hs.add();
     ```  
+    - TreeSet  
+    > 이진탐색 트리구조  
+    > <값이 추가되는 과정>  
+    > <img src = "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FSXQBD%2FbtqEtE5Opsm%2FTyuNWSDe5kDxDoueaNQjsK%2Fimg.png" width = "50%"></img>  
+    > 값들을 자동정렬 해준다.  
+    
   + Iterator
     ```JAVA
       HashSet<Integer> hs = new HashSet<>();
