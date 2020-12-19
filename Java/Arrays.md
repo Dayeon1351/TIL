@@ -1,3 +1,9 @@
+* ArrayList  
+```Java
+ArrayList<Integer> al = new ArrayList<>();
+al.add(3);
+```
+
 * sort 
 > 배열 정렬
   ```Java
