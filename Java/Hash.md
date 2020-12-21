@@ -11,7 +11,7 @@
     > value의 중복은 허용하나 key의 중복은 허용하지 않는다.
     ```JAVA
       HashMap<String,Integer> hm = new HashMap<>();
-      hm.put(key,value);
+      hm.put(key,value);    // 값 변경 시에도 put을 사용해서 변경한다.
       hm.get(key);
       hm.remove(key);       
       hm.clear();           // public void clear();
