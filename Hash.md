@@ -28,6 +28,12 @@
      ``` 
      ---
    + 정렬  
+      - 오름차순  
+      ```Java
+      HashMap<Integer,Double> result = new HashMap<>();
+      List<Integer> keySetList = new ArrayList<>(result.keySet());
+      Collections.sort(keySetList,(o1,o2)->(result.get(o1).compareTo(result.get(o2))));
+      ```
       - 내림차순
       ```Java
       HashMap<Integer,Double> result = new HashMap<>();
