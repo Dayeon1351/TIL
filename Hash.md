@@ -16,7 +16,15 @@
       hm.remove(key);       
       hm.clear();           // public void clear();
       hm.isEmpty();         // public boolean isEmpty();
-    ``` 
+    ```  
+    
+    > 중복된 숫자의 개수 세기
+    ```Java
+     HashMap<Integer,Integer> hm = new HashMap<>();
+        for(Integer i : stages){
+            hm.put(i,hm.getOrDefault(i,0)+1);
+        }
+     ```   
 - - -
 * Set  
   + 데이터의 중복을 인정하지 않는다. 자동 제거해준다.
