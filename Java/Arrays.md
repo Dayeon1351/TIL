@@ -5,7 +5,7 @@ al.add(3);
 ```
 
 * sort 
-> 배열 정렬
+> 배열 정렬  
 > byte, char, double, short, long, int, float는 내림차순 불가능
   ```Java
   Arrays.sort(배열);    // 올림차순
