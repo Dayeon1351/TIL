@@ -1,4 +1,5 @@
 * ArrayList  
+> 데이터의 중복 허용하지 않는다. 자동 중복 제거
 ```Java
 ArrayList<Integer> al = new ArrayList<>();
 al.add(3);
