@@ -13,3 +13,12 @@
     long num = 12345;
     System.out.println(Long.toString(num).length());   // 5
   ```
+  
+  ---  
+* 이진수 변환
+```Java
+int num1 = 3;
+int num2 = 5;
+Integer.toBinaryString(num1);
+Integer.toBinaryString(num1 | num2);
+```
