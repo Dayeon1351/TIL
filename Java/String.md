@@ -13,3 +13,12 @@ String str = "ABC123";
 char[] c = str.toCharArray();
 // c = {'A','B','C','1','2','3'}
 ```
+
+* split()  
+> String을 String 배열로 변환
+```Java
+String s1 = "ABC";
+String[] str1 = s1.split("");     // str1 = {"A","B","C"}
+String s2 = "A B C ";
+String[] str = s.split(" ",-1);   // str2 = {"A","B","C"," "}
+```
