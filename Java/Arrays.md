@@ -1,3 +1,17 @@
+* Array Initialization
+> 배열 초기화
+```Java
+int[] num1 = {1,2};
+
+int[] num2 = {};
+num2 = new int[2];
+num2[0]=1;
+num2[1]=2;
+
+int[] num3 = {};
+num3 = new int[]{1,2}
+```
+
 * ArrayList  
 > 데이터의 중복 허용하지 않는다. 자동 중복 제거
 ```Java
