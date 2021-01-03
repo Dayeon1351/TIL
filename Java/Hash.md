@@ -18,14 +18,24 @@
       hm.isEmpty();         // public boolean isEmpty();
     ```  
     ---  
-    
-    > 중복된 숫자의 개수 세기
-    ```Java
-     HashMap<Integer,Integer> hm = new HashMap<>();
+      * getOrDefault(key,n)  
+      > HashMap에 key에 대한 value가 있으면 value를 반환하고 없으면 n을 반환한다.   
+      ```Java
+      //EX) 중복된 숫자의 개수 세기
+      HashMap<Integer,Integer> hm = new HashMap<>();
         for(Integer i : stages){
             hm.put(i,hm.getOrDefault(i,0)+1);
         }
-     ``` 
+      ``` 
+     ---
+      * keySet()  
+      > HashMap의 key의 값들을 반환한다.
+      ```Java
+      HashMap<Integer,Integer> num = new HashMap<>();
+      for(Integer w : num.keySet()){
+         System.out.println(num.get(w));
+      }
+      ```
      ---
    + 정렬  
       - 오름차순  
