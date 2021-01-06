@@ -1,0 +1,2 @@
+* Left join
+* Right join
