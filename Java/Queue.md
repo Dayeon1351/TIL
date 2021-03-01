@@ -17,3 +17,8 @@ list.add(1);
 list.get(0);    // 인덱스 0의 값 반환 -> 1출력 
 list.set(0,3);  // 인덱스 0의 값을 3으로 변경
 ```
+> list에서 최대값 최소값 구하기
+```Java
+Collections.max(list)   //최대값
+Collections.min(list)   //최소값
+```
