@@ -6,8 +6,8 @@
  int max = Math.max(n,m);     
  for(int i =1;i<max;i++){
    if(n%i==0&&m%i==0){
-     answer[0]=i;
-     answer[1] =(m*n)/i;
+     answer[0]=i;           //최대공약수
+     answer[1] =(m*n)/i;    //최소공배수
    }
  }
 ``` 
