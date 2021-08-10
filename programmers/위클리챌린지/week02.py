@@ -1,20 +1,19 @@
 from collections import Counter
 def solution(scores):
     answer = ''
-    scores = list(zip(*scores))
+    scores = list(map(list,zip(*scores)))
     avgs = []
     
     for score in scores:
         idx = scores.index(score)
-        m = max(score)
-        n = min(score)
-        mCnt = score.count(m)
-        nCnt = score.count(n)
-        if (m == score[idx] and mCnt == 1) or (n == score[idx] and nCnt == 1):
+        m,n = max(score),min(score)
+        mCnt,nCnt = score.count(m), score.count(n)
+        
         # if Counter(score)[score[idx]] == 1 and (m == score[idx] or n == score[idx]):
-            avgs.append((sum(score) - score[idx]) // (len(score) - 1))
-        else:
-            avgs.append(sum(score)//len(score))
+        if (m == score[idx] and mCnt == 1) or (n == score[idx] and nCnt == 1):
+            score.pop(idx)
+            
+        avgs.append(sum(score)//len(score))
             
     for avg in avgs:
         if avg >= 90:
