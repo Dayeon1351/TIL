@@ -7,12 +7,14 @@ def get_melon_best_album(genre_array, play_array):
     index_dict = {}
     total_dict = {}
 
-    for k,v in zip(genre_array,play_array):
+    for i in range(len(genre_array)):
+        k = genre_array[i]
+        v = play_array[i]
         if k in index_dict.keys():
-            index_dict[k].append([play_array.index(v),v])
+            index_dict[k].append([i,v])
             total_dict[k] += v
         else:
-            index_dict[k] = [[play_array.index(v),v]]
+            index_dict[k] = [[i,v]]
             total_dict[k] = v
 
     result = []
@@ -21,7 +23,7 @@ def get_melon_best_album(genre_array, play_array):
     for k,_ in sorted_genre:
         index_array = sorted(index_dict[k],key = lambda x : x[1],reverse= True)
         for i in index_array:
-            if index_array.index(i) > 2:
+            if index_array.index(i)> 1:
                 break
             result.append(i[0])
     
