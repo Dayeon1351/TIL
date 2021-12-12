@@ -1,7 +1,7 @@
-from functools import reduce
 import sys
 from collections import defaultdict
 input = sys.stdin.readline
+
 
 t = int(input())
 for i in range(t):
@@ -16,8 +16,11 @@ for i in range(t):
     if len(dic.keys()) == 1:
         print(list(dic.values())[0])
     else:
-        clothes = list(dic.values())
-        print(reduce(lambda x,y:x*(y+1),clothes,1)-1)
+        ans = 1
+        for c in list(dic.values()):
+            ans *= c + 1
+        print(ans - 1)
+
 
 
 
