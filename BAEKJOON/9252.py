@@ -6,20 +6,19 @@ s2 = input().strip()
 len_s1 = len(s1)
 len_s2 = len(s2)
 
-dp = [0] * len_s1
-arr = [[] for _ in range(len_s1)]
+longest = []
+dp = [""] * len_s1
 for i in range(len_s2):
-    cnt = 0
-    temp = ""
+    temp = []
     for j in range(len_s1):
-        if cnt < dp[j]:
-            cnt = dp[j]
-            temp = "".join(arr[j])
+        if len(temp) < len(dp[j]):
+            temp = dp[j]
         elif s1[j] == s2[i]:
-            dp[j] = cnt + 1
-            arr[j] = temp+s1[j]
-            
-idx = dp.index(max(dp))
-print(dp[idx])
-if dp[idx] != 0:
-    print(arr[idx])
+            dp[j] = temp + [s1[j]]
+        
+        if len(longest) < len(dp[j]):
+            longest = dp[j]
+
+print(len(longest))
+if longest:
+    print("".join(longest))
