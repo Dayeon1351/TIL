@@ -2,22 +2,64 @@ import sys,heapq
 input = sys.stdin.readline
 
 n = int(input())
-planet = []
-graph = [[] for _ in range(n)]
+x = []
+y = []
+z = []
+
 for i in range(n):
-    x,y,z = map(int,input().split())
-    planet.append([x,y,z,i])
+    a,b,c = map(int,input().split())
+    x.append((a,i))
+    y.append((b,i))
+    z.append((c,i))
 
+x.sort()
+y.sort()
+z.sort()
 
-for i in range(3):
-    planet.sort(key=lambda x : x[i])
-    a = planet[0][3]
-    for j in range(1,n):
-        c = abs(planet[j-1][i]-planet[j][i])
-        b = planet[j][3]
-        graph[a].append([c,b])
-        graph[b].append([c,a])
-        a = b
+# 크루스칼
+# graph = []
+# root = [i for i in range(n+1)]
+
+# for i in range(1,n):
+#     graph.append((abs(x[i-1][0]-x[i][0]),x[i-1][1],x[i][1]))
+#     graph.append((abs(y[i-1][0]-y[i][0]),y[i-1][1],y[i][1]))
+#     graph.append((abs(z[i-1][0]-z[i][0]),z[i-1][1],z[i][1]))
+    
+
+# graph.sort()
+
+# def find(x):
+#     if root[x] == x:
+#         return x
+#     return find(root[x])
+
+# def union(a,b):
+#     a = find(a)
+#     b = find(b)
+#     if a < b:
+#         root[b] = a
+#     else:
+#         root[a] = b
+
+# result = 0
+# for cost_node in graph:
+#     cost,cur_node,next_node = cost_node
+#     if find(cur_node) != find(next_node):
+#         union(cur_node,next_node)
+#         result += cost
+
+# print(result)
+
+#프림
+graph = [[] for _ in range(n)]
+for i in range(1,n):
+    graph[x[i-1][1]].append((abs(x[i-1][0]-x[i][0]),x[i][1]))
+    graph[x[i][1]].append((abs(x[i-1][0]-x[i][0]),x[i-1][1]))
+    graph[y[i-1][1]].append((abs(y[i-1][0]-y[i][0]),y[i][1]))
+    graph[y[i][1]].append((abs(y[i-1][0]-y[i][0]),y[i-1][1]))
+    graph[z[i-1][1]].append((abs(z[i-1][0]-z[i][0]),z[i][1]))
+    graph[z[i][1]].append((abs(z[i-1][0]-z[i][0]),z[i-1][1]))
+
 
 cnt = 0
 result = 0
