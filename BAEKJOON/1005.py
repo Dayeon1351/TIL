@@ -17,10 +17,7 @@ for _ in range(t):
 
     queue = deque([i for i in range(1,n+1) if point[i] == 0])
     
-    dp = [0] * (n+1)
-    for i in range(1,n+1):
-        if point[i] == 0:
-            dp[i] = time[i]
+    dp = [0] + [time[i] if point[i] == 0 else 0 for i in range(1,n+1)]
     
     while queue:
         cur_node = queue.popleft()
